@@ -55,7 +55,7 @@ public enum WALFont {
     }
 }
 
-extension WALFont {
+public extension WALFont {
     var font: UIFont {
         guard let font = UIFont(name: fontProperty.font.name, size: fontProperty.size) else {
             return UIFont()
