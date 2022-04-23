@@ -9,8 +9,8 @@ import UIKit
 
 public extension UILabel {
     func addLabelSpacing(fontStyle: WALFont) {
-        guard let lineHeight = fontStyle.fontDescription.lineHeight else { return }
-        let kernValue = fontStyle.fontDescription.kern
+        guard let lineHeight = fontStyle.fontProperty.lineHeight else { return }
+        let kernValue = fontStyle.fontProperty.kern
         
         if let labelText = text, labelText.count > 0 {
             let paragraphStyle = NSMutableParagraphStyle()

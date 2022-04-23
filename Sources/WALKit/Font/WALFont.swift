@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct FontProperty {
+public struct FontProperty {
     let font: UIFont.FontType
     let size: CGFloat
     let kern: CGFloat
@@ -27,7 +27,7 @@ public enum WALFont {
     case body8
     case body9
     
-    var fontDescription: FontProperty {
+    public var fontProperty: FontProperty {
         switch self {
         case .title1:
             return FontProperty(font: .semibold, size: 20, kern: -0.3, lineHeight: nil)
@@ -52,5 +52,14 @@ public enum WALFont {
         case .body9:
             return FontProperty(font: .regular, size: 13, kern: -0.3, lineHeight: nil)
         }
+    }
+}
+
+extension WALFont {
+    var font: UIFont {
+        guard let font = UIFont(name: fontProperty.font.name, size: fontProperty.size) else {
+            return UIFont()
+        }
+        return font
     }
 }
