@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UILabel {
-    func addLabelSpacing(fontStyle: FontStyle) {
+    func addLabelSpacing(fontStyle: WALFont) {
         guard let lineHeight = fontStyle.fontDescription.lineHeight else { return }
         let kernValue = fontStyle.fontDescription.kern
         
