@@ -14,7 +14,7 @@ struct FontProperty {
     let lineHeight: CGFloat?
 }
 
-public enum FontStyle {
+public enum WALFont {
     case title1
     case title2
     case body1
@@ -27,7 +27,7 @@ public enum FontStyle {
     case body8
     case body9
     
-    var fontDescription: FontDescription {
+    var fontDescription: FontProperty {
         switch self {
         case .title1:
             return FontProperty(font: .semibold, size: 20, kern: -0.3, lineHeight: nil)

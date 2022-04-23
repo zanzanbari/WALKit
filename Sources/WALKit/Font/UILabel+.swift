@@ -18,7 +18,8 @@ public extension UILabel {
             attributedText = NSAttributedString(
                 string: labelText,
                 attributes: [
-                    .kern: kernValue, .paragraphStyle: paragraphStyle
+                    .kern: kernValue,
+                        .paragraphStyle: paragraphStyle
                 ]
             )
         }
