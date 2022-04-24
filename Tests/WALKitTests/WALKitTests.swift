@@ -15,15 +15,15 @@ final class WALKitTests: XCTestCase {
 
 fileprivate extension UIColor {
     static var myProjectUIColors: [UIColor] = [
-        UIColor.black100,
-        UIColor.white100, //It fails when it tries to access this color.
-        UIColor.gray100,
-        UIColor.gray200,
-        UIColor.gray300,
-        UIColor.gray400,
-        UIColor.gray500,
-        UIColor.gray600,
-        UIColor.orange100,
-        UIColor.mint100
-        ]
+        .black100,
+        .white100,
+        .gray100,
+        .gray200,
+        .gray300,
+        .gray400,
+        .gray500,
+        .gray600,
+        .orange100,
+        .mint100
+    ]
 }
