@@ -13,7 +13,10 @@ public enum WALIcon: String {
 
 public extension WALIcon {
     var image: UIImage {
-        return UIImage(named: self.rawValue)!
+        guard let image = UIImage(named: self.rawValue) else {
+            return UIImage()
+        }
+        return image
     }
 }
 
