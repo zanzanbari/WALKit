@@ -13,18 +13,18 @@ import UIKit
 
 public extension UIColor {
     // Base Color
-    static let black = UIColor(named: "black100")
-    static let white = UIColor(named: "white100")
+    static let black100 = UIColor(named: "black100", in: .module, compatibleWith: nil)!
+    static let white100 = UIColor(named: "white100", in: .module, compatibleWith: nil)!
     
     // Gray Scale
-    static let gray100 = UIColor(named: "gray100")
-    static let gray200 = UIColor(named: "gray200")
-    static let gray300 = UIColor(named: "gray300")
-    static let gray400 = UIColor(named: "gray400")
-    static let gray500 = UIColor(named: "gray500")
-    static let gray600 = UIColor(named: "gray600")
+    static let gray100 = UIColor(named: "gray100", in: .module, compatibleWith: nil)!
+    static let gray200 = UIColor(named: "gray200", in: .module, compatibleWith: nil)!
+    static let gray300 = UIColor(named: "gray300", in: .module, compatibleWith: nil)!
+    static let gray400 = UIColor(named: "gray400", in: .module, compatibleWith: nil)!
+    static let gray500 = UIColor(named: "gray500", in: .module, compatibleWith: nil)!
+    static let gray600 = UIColor(named: "gray600", in: .module, compatibleWith: nil)!
     
     // Brand Color
-    static let orange100 = UIColor(named: "orange100")
-    static let mint100 = UIColor(named: "mint100")
+    static let orange100 = UIColor(named: "orange100", in: .module, compatibleWith: nil)!
+    static let mint100 = UIColor(named: "mint100", in: .module, compatibleWith: nil)!
 }
