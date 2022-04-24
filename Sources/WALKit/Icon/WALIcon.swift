@@ -3,7 +3,7 @@
 //  
 //
 //  Created by heerucan on 2022/04/24.
-//UIImage(named: "btn_delete", in: .module, compatibleWith: nil)!
+//
 
 import UIKit
 
@@ -12,8 +12,8 @@ public enum WALIcon: String {
 }
 
 public extension WALIcon {
-    var image: UIImage {
-        return UIImage(named: self.rawValue)!
+    var image: UIImage? {
+        return UIImage(named: self.rawValue)
     }
 }
 
