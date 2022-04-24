@@ -21,7 +21,7 @@ let package = Package(
             dependencies: [],
             resources: [
                 .process("Resource/Fonts"),
-                .process("Sources/WALKit/Color/Color.xcassets")
+                .process("*.xcassets")
             ]
         ),
         .testTarget(
