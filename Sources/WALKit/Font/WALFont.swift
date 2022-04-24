@@ -5,7 +5,9 @@
 //  Created by heerucan on 2022/04/23.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
 public struct FontProperty {
     let font: UIFont.FontType

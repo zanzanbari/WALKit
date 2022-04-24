@@ -5,7 +5,9 @@
 //  Created by heerucan on 2022/04/22.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
 public extension UIFont {
     enum FontType: String {

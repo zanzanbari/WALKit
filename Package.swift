@@ -20,7 +20,8 @@ let package = Package(
             name: "WALKit",
             dependencies: [],
             resources: [
-                .process("Resource/Fonts")
+                .process("Resource/Fonts"),
+                .process("Color/Color.xcassets")
             ]
         ),
         .testTarget(

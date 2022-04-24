@@ -3,6 +3,6 @@ import XCTest
 
 final class WALKitTests: XCTestCase {
     func testExample() throws {
-    
+        
     }
 }

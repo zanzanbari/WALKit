@@ -5,49 +5,26 @@
 //  Created by heerucan on 2022/04/24.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
 /** WAL Color System */
 
-public enum WALColor: String, CaseIterable {
+public enum WALColor: CaseIterable {
     // Base Color
-    case black
-    case white
+    static let black = UIColor(named: "black100")
+    static let  white = UIColor(named: "white100")
     
     // Gray Scale
-    case gray100
-    case gray200
-    case gray300
-    case gray400
-    case gray500
-    case gray600
-
-    // Brand Color
-    case orange100
-    case mint100
+    static let  gray100 = UIColor(named: "gray100")
+    static let  gray200 = UIColor(named: "gray200")
+    static let  gray300 = UIColor(named: "gray300")
+    static let  gray400 = UIColor(named: "gray400")
+    static let  gray500 = UIColor(named: "gray500")
+    static let  gray600 = UIColor(named: "gray600")
     
-    public var color: UIColor {
-        switch self {
-        case .black:
-            return UIColor(named: "black100")!
-        case .white:
-            return UIColor(named: "white100")!
-        case .gray100:
-            return UIColor(named: "gray100")!
-        case .gray200:
-            return UIColor(named: "gray200")!
-        case .gray300:
-            return UIColor(named: "gray300")!
-        case .gray400:
-            return UIColor(named: "gray400")!
-        case .gray500:
-            return UIColor(named: "gray500")!
-        case .gray600:
-            return UIColor(named: "gray600")!
-        case .orange100:
-            return UIColor(named: "orange100")!
-        case .mint100:
-            return UIColor(named: "mint100")!
-        }
-    }
+    // Brand Color
+    static let  orange100 = UIColor(named: "orange100")
+    static let  mint100 = UIColor(named: "mint100")
 }

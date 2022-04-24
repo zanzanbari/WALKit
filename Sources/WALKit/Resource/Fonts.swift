@@ -5,7 +5,9 @@
 //  Created by heerucan on 2022/04/24.
 //
 
+#if os(iOS)
 import UIKit
+#endif
 
 public func registerFonts() {
     _ = UIFont.registerFont(bundle: .module, fontName: "Pretendard-Regular", fontExtension: "otf")
