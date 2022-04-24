@@ -12,8 +12,8 @@ public enum WALIcon: String {
 }
 
 public extension WALIcon {
-    var image: UIImage? {
-        return UIImage(named: self.rawValue)
+    var image: UIImage {
+        return UIImage(named: self.rawValue)!
     }
 }
 

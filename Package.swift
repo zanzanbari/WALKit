@@ -21,7 +21,8 @@ let package = Package(
             dependencies: [],
             resources: [
                 .process("Resource/Fonts"),
-                .process("*.xcassets")
+                .process("*.xcassets"),
+                .process("Icon/WALIcon.xcassets")
             ]
         ),
         .testTarget(
