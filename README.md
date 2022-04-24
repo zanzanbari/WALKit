@@ -20,7 +20,12 @@ let walLabel: UILabel = {
 #### Color System
 
 ```swift
-아직
+let walLabel: UILabel = {
+    let label = UILabel()
+    label.textColor = .orange100
+    label.text = "왈소리 색깔"
+    return label
+}()
 ```
 
 
