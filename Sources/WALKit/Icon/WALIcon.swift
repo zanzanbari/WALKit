@@ -10,7 +10,7 @@ import UIKit
 public enum WALIcon: String {
     case btnDelete = "btn_delete"
     
-    var image: UIImage {
+    public var image: UIImage {
         guard let image = UIImage(named: self.rawValue, in: .module, compatibleWith: nil) else {
             return UIImage()
         }
