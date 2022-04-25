@@ -9,6 +9,8 @@ import UIKit
 
 import SnapKit
 
+/** WAL NavigationBar : 공통적으로 사용되는 네비게이션바 : height = 44 */
+
 public class WALNavigationBar: UIView {
     
     // MARK: - Property

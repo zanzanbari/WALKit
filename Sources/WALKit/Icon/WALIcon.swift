@@ -7,6 +7,8 @@
 
 import UIKit
 
+/** WAL Icon System */
+
 public enum WALIcon: String {
     
     // Button Asset

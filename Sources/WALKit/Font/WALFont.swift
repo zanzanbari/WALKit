@@ -9,6 +9,8 @@
 import UIKit
 #endif
 
+/** WAL Typo System */
+
 public struct FontProperty {
     let font: UIFont.FontType
     let size: CGFloat

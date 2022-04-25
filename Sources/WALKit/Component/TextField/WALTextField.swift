@@ -9,6 +9,8 @@ import UIKit
 
 import SnapKit
 
+/** WAL TextField : WAL에서 사용되는 텍스트필드입니다. */
+
 public class WALTextField: UITextField {
     
     // MARK: - Property
