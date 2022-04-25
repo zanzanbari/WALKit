@@ -9,9 +9,7 @@ import UIKit
 
 public enum WALIcon: String {
     case btnDelete = "btn_delete"
-}
-
-public extension WALIcon {
+    
     var image: UIImage {
         guard let image = UIImage(named: self.rawValue, in: .module, compatibleWith: nil) else {
             return UIImage()

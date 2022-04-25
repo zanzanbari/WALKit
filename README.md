@@ -28,6 +28,16 @@ let walLabel: UILabel = {
 }()
 ```
 
+#### Asset System
+
+```swift
+let deleteImageView: UIImageView = {
+    let image = UIImageView()
+    image.image = WALIcon.btnDelete.image
+    return image
+}()
+```
+
 
 ## Installation
 
