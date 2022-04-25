@@ -2,13 +2,16 @@ import XCTest
 @testable import WALKit
 
 final class WALKitTests: XCTestCase {
-    func testExample() throws {
-        
-    }
     
     func testLoadUIColorFromBundle() {
         for color in UIColor.myProjectUIColors {
             XCTAssertNotNil(color)
+        }
+    }
+    
+    func testLoadUIImageFromBundle() {
+        for image in UIImage.myProjectUIImages {
+            XCTAssertNotNil(image)
         }
     }
 }
@@ -25,5 +28,11 @@ fileprivate extension UIColor {
         .gray600,
         .orange100,
         .mint100
+    ]
+}
+
+fileprivate extension UIImage {
+    static var myProjectUIImages: [UIImage] = [
+        .btnDelete
     ]
 }

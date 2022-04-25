@@ -8,20 +8,5 @@
 import UIKit
 
 public extension UIImage {
-    static let btnDelete = UIImage(named: "btn_delete")
+    static let btnDelete = UIImage(named: "btn_delete", in: .module, compatibleWith: nil)!
 }
-
-//public extension WALIcon {
-//    var image: UIImage {
-//        guard let image = UIImage(named: self.rawValue) else {
-//            return UIImage()
-//        }
-//        return image
-//    }
-//}
-//
-//public extension UIImage {
-//  convenience init(asset: WALIcon) {
-//    self.init(named: asset.rawValue)!
-//  }
-//}
