@@ -33,15 +33,13 @@ public class WALNavigationBar: UIView {
         return label
     }()
     
-    private let leftBarButton: UIButton = {
+    public let leftBarButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray500
         return button
     }()
     
-    private let rightBarButton: UIButton = {
+    public let rightBarButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray500
         return button
     }()
     
@@ -84,12 +82,13 @@ public class WALNavigationBar: UIView {
     }
     
     private func setupIcon() {
-        if leftIcon != nil {
-            leftBarButton.setImage(leftIcon, for: .normal)
-        }
+        guard let leftIcon = leftIcon else { return }
+        guard let rightIcon = rightIcon else { return }
         
-        if rightIcon != nil {
-            rightBarButton.setImage(rightIcon, for: .normal)
-        }
+        leftBarButton.setImage(leftIcon, for: .normal)
+        leftBarButton.setImage(leftIcon.withTintColor(.gray600, renderingMode: .alwaysOriginal), for: .highlighted)
+        
+        rightBarButton.setImage(rightIcon, for: .normal)
+        rightBarButton.setImage(rightIcon.withTintColor(.gray600, renderingMode: .alwaysOriginal), for: .highlighted)
     }
 }

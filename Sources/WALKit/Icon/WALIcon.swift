@@ -17,8 +17,6 @@ public enum WALIcon: String {
     case icnProgress1 = "icnProgress1"
     case icnProgress2 = "icnProgress2"
     case icnProgress3 = "icnProgress3"
-    
-    
 }
 
 public extension WALIcon {

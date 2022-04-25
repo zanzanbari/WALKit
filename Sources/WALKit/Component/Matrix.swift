@@ -15,4 +15,5 @@ public struct Matrix {
     // TextField
     static let textFieldHeight: CGFloat = 50
     static let textFieldCornerRadius: CGFloat = 12
+    static let textFieldMargin: CGFloat = 16
 }
