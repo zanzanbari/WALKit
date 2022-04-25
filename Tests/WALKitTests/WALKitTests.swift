@@ -10,7 +10,7 @@ final class WALKitTests: XCTestCase {
     }
     
     func testLoadUIImageFromBundle() {
-        for image in UIImage.myProjectUIImages {
+        for image in WALIcon.myProjectUIImages {
             XCTAssertNotNil(image)
         }
     }
@@ -31,8 +31,8 @@ fileprivate extension UIColor {
     ]
 }
 
-fileprivate extension UIImage {
-    static var myProjectUIImages: [UIImage] = [
+fileprivate extension WALIcon {
+    static var myProjectUIImages: [WALIcon] = [
         .btnDelete
     ]
 }
