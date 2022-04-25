@@ -11,12 +11,6 @@ final class WALKitTests: XCTestCase {
             XCTAssertNotNil(color)
         }
     }
-    
-    func testLoadIconFromBundle() {
-        for icon in UIImage.myProjectUIImages {
-            XCTAssertNotNil(icon)
-        }
-    }
 }
 
 fileprivate extension UIColor {
@@ -31,11 +25,5 @@ fileprivate extension UIColor {
         .gray600,
         .orange100,
         .mint100
-    ]
-}
-
-fileprivate extension UIImage {
-    static var myProjectUIImages: [WALIcon] = [
-        .btnDelete
     ]
 }
