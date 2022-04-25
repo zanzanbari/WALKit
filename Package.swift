@@ -14,11 +14,14 @@ let package = Package(
             targets: ["WALKit"]),
     ],
     dependencies: [
+        .package(name: "SnapKit", url: "https://github.com/SnapKit/SnapKit", from: "5.6.0")
     ],
     targets: [
         .target(
             name: "WALKit",
-            dependencies: [],
+            dependencies: [
+                .product(name: "SnapKit", package: "SnapKit", condition: .when(platforms: [.iOS]))
+            ],
             resources: [
                 .process("Resource/Fonts"),
                 .process("*.xcassets"),
