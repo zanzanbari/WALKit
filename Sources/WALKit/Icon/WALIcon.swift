@@ -13,6 +13,8 @@ public enum WALIcon: String {
     
     // Button Asset
     case btnDelete = "btn_delete"
+    case btnBack = "btn_back"
+    case btnHistory = "btn_history"
     
     // Icon Asset
     case icnWarning = "icn_warning"
