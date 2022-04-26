@@ -25,6 +25,7 @@ public extension UIColor {
     static let gray600 = UIColor(named: "gray600", in: .module, compatibleWith: nil)!
     
     // Brand Color
+    static let orange50 = UIColor(named: "orange50", in: .module, compatibleWith: nil)!
     static let orange100 = UIColor(named: "orange100", in: .module, compatibleWith: nil)!
     static let mint100 = UIColor(named: "mint100", in: .module, compatibleWith: nil)!
 }

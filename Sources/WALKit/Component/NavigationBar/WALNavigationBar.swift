@@ -86,12 +86,12 @@ public class WALNavigationBar: UIView {
     private func setupIcon() {
         if leftIcon != nil {
             leftBarButton.setImage(leftIcon, for: .normal)
-            leftBarButton.setImage(leftIcon?.withTintColor(.gray600, renderingMode: .alwaysOriginal), for: .highlighted)
+            leftBarButton.setImage(leftIcon?.withTintColor(.gray200, renderingMode: .alwaysOriginal), for: .highlighted)
         }
         
         if rightIcon != nil {
             rightBarButton.setImage(rightIcon, for: .normal)
-            rightBarButton.setImage(rightIcon?.withTintColor(.gray600, renderingMode: .alwaysOriginal), for: .highlighted)
+            rightBarButton.setImage(rightIcon?.withTintColor(.gray200, renderingMode: .alwaysOriginal), for: .highlighted)
         }
     }
 }
