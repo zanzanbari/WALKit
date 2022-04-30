@@ -12,8 +12,9 @@ public class WALPlainButton: UIButton {
     // MARK: - Property
         
     public var title: String? {
-        get { return setTitle(title, for: .normal) }
-        set { self.titleLabel?.text = newValue }
+        didSet {
+            setTitle(title, for: .normal)
+        }
     }
     
     public var isDisabled: Bool = false {
@@ -42,7 +43,7 @@ public class WALPlainButton: UIButton {
         layer.cornerRadius = Matrix.buttonCornerRadius
         setTitleColor(.white100, for: .normal)
         setTitleColor(.orange50, for: .highlighted)
-        setupState()
+        setupColor()
     }
     
     private func setupLayout() {
