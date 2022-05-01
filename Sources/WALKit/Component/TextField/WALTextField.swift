@@ -23,6 +23,10 @@ public class WALTextField: UITextField {
         didSet { setupPlaceholder() }
     }
     
+    public override var font: UIFont? {
+        didSet { self.font = WALFont.body6.font }
+    }
+    
     // MARK: - Initialize
     
     public init() {
@@ -38,7 +42,6 @@ public class WALTextField: UITextField {
     // MARK: - Set UI
     
     private func setupUI() {
-        font = WALFont.body6.font
         tintColor = .orange100
         backgroundColor = .white100
         layer.cornerRadius = Matrix.textFieldCornerRadius
