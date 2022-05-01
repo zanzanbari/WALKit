@@ -15,6 +15,7 @@ public extension UIColor {
     // Base Color
     static let black100 = UIColor(named: "black100", in: .module, compatibleWith: nil)!
     static let white100 = UIColor(named: "white100", in: .module, compatibleWith: nil)!
+    static let red100 = UIColor(named: "red100", in: .module, compatibleWith: nil)!
     
     // Gray Scale
     static let gray100 = UIColor(named: "gray100", in: .module, compatibleWith: nil)!
