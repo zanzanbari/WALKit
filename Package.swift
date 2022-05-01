@@ -22,6 +22,7 @@ let package = Package(
             dependencies: [
                 .product(name: "SnapKit", package: "SnapKit", condition: .when(platforms: [.iOS]))
             ],
+            path: "Sources/WALkit",
             resources: [
                 .process("Resource/Fonts"),
                 .process("Sources/WALKit/Icon/WALIcon.xcassets"),
