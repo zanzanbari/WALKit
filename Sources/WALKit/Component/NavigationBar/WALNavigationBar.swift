@@ -69,7 +69,8 @@ public class WALNavigationBar: UIView {
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.top.equalToSuperview().inset(11)
+            make.centerX.equalToSuperview()
         }
         
         leftBarButton.snp.makeConstraints { make in
