@@ -25,7 +25,7 @@ let package = Package(
             path: "Sources/WALKit",
             resources: [
                 .process("Font/Fonts"),
-                .process("Icon/WALIcon.xcassets"),
+                .process("Icon/Icon.xcassets"),
             ]
         ),
         .testTarget(
