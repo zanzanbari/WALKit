@@ -23,10 +23,6 @@ public class WALTextField: UITextField {
         didSet { setupPlaceholder() }
     }
     
-    public override var font: UIFont? {
-        didSet { self.font = WALFont.body6.font }
-    }
-    
     // MARK: - Initialize
     
     public init() {
