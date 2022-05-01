@@ -22,10 +22,10 @@ let package = Package(
             dependencies: [
                 .product(name: "SnapKit", package: "SnapKit", condition: .when(platforms: [.iOS]))
             ],
-            path: "Sources/WALkit",
+            path: "Sources/WALKit",
             resources: [
                 .process("Font/Fonts"),
-                .process("Sources/WALKit/Icon/WALIcon.xcassets"),
+                .process("Icon/WALIcon.xcassets"),
             ]
         ),
         .testTarget(
