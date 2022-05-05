@@ -29,6 +29,10 @@ public enum WALIcon: String {
     case icnLock = "icn_lock"
     case icnReturn = "icn_rt"
     case icnTrash = "icn_trash"
+    case icnBubble = "icn_bubble"
+    case icnEvening = "icn_evening"
+    case icnLaunch = "icn_launch"
+    case icnMorning = "icn_morning"
 }
 
 public extension WALIcon {
