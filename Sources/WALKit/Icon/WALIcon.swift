@@ -33,6 +33,22 @@ public enum WALIcon: String {
     case icnEvening = "icn_evening"
     case icnLaunch = "icn_launch"
     case icnMorning = "icn_morning"
+    
+    // Card Asset
+    case imgDripActive = "img_drip_active"
+    case imgDripInActive = "img_drip_inactive"
+    case imgGgujungActive = "img_ggujung_active"
+    case imgGgujungInActive = "img_ggujung_inactive"
+    case imgJujeopActive = "img_jujeop_active"
+    case imgJujeopInActive = "img_jujeop_inactive"
+    case imgWeroActive = "img_wero_active"
+    case imgWeroInActive = "img_wero_inactive"
+    
+    // 왈뿡 Asset
+    case imgWallbbongLove = "img_walbbong_love"
+    case imgWallbbongFun = "img_walbbong_fun"
+    case imgWallbbongCheer = "img_walbbong_cheer"
+    case imgWallbbongAngry = "img_walbbong_angry"
 }
 
 public extension WALIcon {

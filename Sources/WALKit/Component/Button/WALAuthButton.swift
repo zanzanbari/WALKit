@@ -29,7 +29,7 @@ public class WALAuthButton: UIButton {
             case .apple:
                 return .black100
             case .kakao:
-                return .yellow
+                return .yellow100
             }
         }
         
@@ -42,12 +42,21 @@ public class WALAuthButton: UIButton {
             }
         }
         
+        fileprivate var borderColor: CGColor? {
+            switch self {
+            case .apple:
+                return UIColor.black100.cgColor
+            case .kakao:
+                return nil
+            }
+        }
+        
         fileprivate var icon: UIImage {
             switch self {
             case .apple:
-                return WALIcon.btnHistory.image
+                return WALIcon.icnApple.image
             case .kakao:
-                return WALIcon.btnHistory.image
+                return WALIcon.icnKakao.image
             }
         }
     }
@@ -58,8 +67,9 @@ public class WALAuthButton: UIButton {
 
     // MARK: - Initialize
     
-    public init() {
+    public init(type: AuthType) {
         super.init(frame: .zero)
+        authType = type
         setupUI()
         setupLayout()
     }

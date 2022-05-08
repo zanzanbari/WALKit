@@ -74,12 +74,14 @@ public class WALNavigationBar: UIView {
         }
         
         leftBarButton.snp.makeConstraints { make in
-            make.top.leading.bottom.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.leading.equalToSuperview().inset(4)
             make.width.height.equalTo(Matrix.barButtonSize)
         }
         
         rightBarButton.snp.makeConstraints { make in
-            make.top.trailing.bottom.equalToSuperview()
+            make.top.bottom.equalToSuperview()
+            make.trailing.equalToSuperview().inset(7)
             make.width.height.equalTo(Matrix.barButtonSize)
         }
     }
