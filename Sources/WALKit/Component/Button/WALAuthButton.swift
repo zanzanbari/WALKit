@@ -42,10 +42,10 @@ public class WALAuthButton: UIButton {
             }
         }
         
-        fileprivate var borderColor: CGColor? {
+        fileprivate var borderColor: UIColor? {
             switch self {
             case .apple:
-                return UIColor.black200.cgColor
+                return .black200
             case .kakao:
                 return nil
             }
@@ -108,20 +108,30 @@ public class WALAuthButton: UIButton {
     // MARK: - Set UI
     
     private func setupUI() {
-        titleLabel?.font = .boldSystemFont(ofSize: 17)
-        layer.cornerRadius = Matrix.authCornerRadius
-        layer.borderColor = authType.borderColor
-        layer.borderWidth = authType.borderWidth
-        setTitle(authType.text, for: .normal)
-        setTitleColor(authType.foregroundColor, for: .normal)
-        setTitleColor(authType.foregroundColor.withAlphaComponent(0.5), for: .highlighted)
-        backgroundColor = authType.backgroundColor
-        setImage(authType.icon, for: .normal)
-        
-        var buttonConfiguration = UIButton.Configuration.plain()
+        var buttonConfiguration = UIButton.Configuration.filled()
         buttonConfiguration.contentInsets = authType.contentInset
         buttonConfiguration.imagePadding = authType.imagePadding
+        buttonConfiguration.imagePlacement = .leading
+        buttonConfiguration.image = authType.icon
+        buttonConfiguration.baseBackgroundColor = authType.backgroundColor
+        buttonConfiguration.baseForegroundColor = authType.foregroundColor
+        buttonConfiguration.background.cornerRadius = Matrix.authCornerRadius
+        buttonConfiguration.background.strokeWidth = authType.borderWidth
+        buttonConfiguration.background.strokeColor = authType.borderColor
+        
+        var attString = AttributedString(authType.text)
+        attString.font = .boldSystemFont(ofSize: 17)
+        attString.foregroundColor = authType.foregroundColor        
         configuration = buttonConfiguration
+        
+        self.configurationUpdateHandler = { button in
+            switch button.state {
+            case .highlighted:
+                button.configuration?.baseForegroundColor = self.authType.foregroundColor.withAlphaComponent(0.5)
+            default:
+                button.configuration?.baseForegroundColor = self.authType.foregroundColor
+            }
+        }
     }
     
     private func setupLayout() {
