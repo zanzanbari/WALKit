@@ -109,6 +109,7 @@ public class WALAuthButton: UIButton {
     
     private func setupUI() {
         var buttonConfiguration = UIButton.Configuration.filled()
+        buttonConfiguration.title = authType.text
         buttonConfiguration.contentInsets = authType.contentInset
         buttonConfiguration.imagePadding = authType.imagePadding
         buttonConfiguration.imagePlacement = .leading
@@ -121,7 +122,7 @@ public class WALAuthButton: UIButton {
         
         var attString = AttributedString(authType.text)
         attString.font = .boldSystemFont(ofSize: 17)
-        attString.foregroundColor = authType.foregroundColor        
+        attString.foregroundColor = authType.foregroundColor
         configuration = buttonConfiguration
         
         self.configurationUpdateHandler = { button in
