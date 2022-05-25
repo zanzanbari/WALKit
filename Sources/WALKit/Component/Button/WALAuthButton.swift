@@ -69,7 +69,7 @@ public class WALAuthButton: UIButton {
             }
         }
         
-        fileprivate var imagePadding: NSDirectionalEdgeInsets {
+        fileprivate var imagePadding: Int {
             switch self {
             case .apple:
                 return 71
