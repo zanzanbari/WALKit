@@ -111,6 +111,7 @@ public class WALAuthButton: UIButton {
         
         var attributedString = AttributedString(authType.text)
         attributedString.font = .boldSystemFont(ofSize: 17)
+        attributedString.foregroundColor = authType.foregroundColor
         
         var buttonConfiguration = UIButton.Configuration.filled()
         buttonConfiguration.attributedTitle = attributedString
