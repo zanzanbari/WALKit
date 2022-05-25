@@ -69,7 +69,7 @@ public class WALAuthButton: UIButton {
             }
         }
         
-        fileprivate var imagePadding: Int {
+        fileprivate var imagePadding: CGFloat {
             switch self {
             case .apple:
                 return 71
@@ -118,10 +118,10 @@ public class WALAuthButton: UIButton {
         backgroundColor = authType.backgroundColor
         setImage(authType.icon, for: .normal)
         
-        var configuration = UIButton.Configuration.plain()
-        configuration.contentInsets = authType.contentInset
-        configuration.imagePadding = authType.imagePadding
-        configuration = configuration
+        var buttonConfiguration = UIButton.Configuration.plain()
+        buttonConfiguration.contentInsets = authType.contentInset
+        buttonConfiguration.imagePadding = authType.imagePadding
+        configuration = buttonConfiguration
     }
     
     private func setupLayout() {
