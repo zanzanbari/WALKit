@@ -14,6 +14,7 @@ import UIKit
 public extension UIColor {
     // Base Color
     static let black100 = UIColor(named: "black100", in: .module, compatibleWith: nil)!
+    static let black200 = UIColor(named: "black200", in: .module, compatibleWith: nil)!
     static let white100 = UIColor(named: "white100", in: .module, compatibleWith: nil)!
     static let red100 = UIColor(named: "red100", in: .module, compatibleWith: nil)!
     static let yellow100 = UIColor(named: "yellow100", in: .module, compatibleWith: nil)!

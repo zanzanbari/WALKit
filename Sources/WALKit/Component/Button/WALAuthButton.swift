@@ -27,7 +27,7 @@ public class WALAuthButton: UIButton {
         fileprivate var backgroundColor: UIColor {
             switch self {
             case .apple:
-                return .black100
+                return .white100
             case .kakao:
                 return .yellow100
             }
@@ -36,18 +36,27 @@ public class WALAuthButton: UIButton {
         fileprivate var foregroundColor: UIColor {
             switch self {
             case .apple:
-                return .white100
+                return .black200
             case .kakao:
-                return .black100
+                return .yellow100
             }
         }
         
         fileprivate var borderColor: CGColor? {
             switch self {
             case .apple:
-                return UIColor.black100.cgColor
+                return UIColor.black200.cgColor
             case .kakao:
                 return nil
+            }
+        }
+        
+        fileprivate var borderWidth: CGFloat {
+            switch self {
+            case .apple:
+                return 1
+            case .kakao:
+                return 0
             }
         }
         
@@ -57,6 +66,24 @@ public class WALAuthButton: UIButton {
                 return WALIcon.icnApple.image
             case .kakao:
                 return WALIcon.icnKakao.image
+            }
+        }
+        
+        fileprivate var imagePadding: NSDirectionalEdgeInsets {
+            switch self {
+            case .apple:
+                return 71
+            case .kakao:
+                return 78
+            }
+        }
+        
+        fileprivate var contentInset: NSDirectionalEdgeInsets {
+            switch self {
+            case .apple:
+                return NSDirectionalEdgeInsets(top: 11, leading: 12, bottom: 11, trailing: 12)
+            case .kakao:
+                return NSDirectionalEdgeInsets(top: 11, leading: 13, bottom: 11, trailing: 13)
             }
         }
     }
@@ -81,13 +108,20 @@ public class WALAuthButton: UIButton {
     // MARK: - Set UI
     
     private func setupUI() {
-        titleLabel?.font = WALFont.body2.font
-        layer.cornerRadius = Matrix.buttonCornerRadius
+        titleLabel?.font = .boldSystemFont(ofSize: 17)
+        layer.cornerRadius = Matrix.authCornerRadius
+        layer.borderColor = authType.borderColor
+        layer.borderWidth = authType.borderWidth
         setTitle(authType.text, for: .normal)
         setTitleColor(authType.foregroundColor, for: .normal)
         setTitleColor(authType.foregroundColor.withAlphaComponent(0.5), for: .highlighted)
         backgroundColor = authType.backgroundColor
         setImage(authType.icon, for: .normal)
+        
+        var configuration = UIButton.Configuration.plain()
+        configuration.contentInsets = authType.contentInset
+        configuration.imagePadding = authType.imagePadding
+        configuration = configuration
     }
     
     private func setupLayout() {

@@ -49,6 +49,7 @@ public enum WALIcon: String {
     case imgWallbbongFun = "img_walbbong_fun"
     case imgWallbbongCheer = "img_walbbong_cheer"
     case imgWallbbongAngry = "img_walbbong_angry"
+    case imgWalbbongLogo = "img_walbbong_logo"
 }
 
 public extension WALIcon {

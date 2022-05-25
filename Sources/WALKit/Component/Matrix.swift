@@ -20,4 +20,5 @@ public struct Matrix {
     // Button
     static let buttonCornerRadius: CGFloat = 23
     static let buttonHeight: CGFloat = 52
+    static let authCornerRadius: CGFloat = 12
 }
