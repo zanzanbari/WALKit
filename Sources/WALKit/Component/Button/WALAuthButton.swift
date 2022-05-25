@@ -42,10 +42,10 @@ public class WALAuthButton: UIButton {
             }
         }
         
-        fileprivate var borderColor: UIColor? {
+        fileprivate var borderColor: CGColor? {
             switch self {
             case .apple:
-                return .black200
+                return UIColor.black200.cgColor
             case .kakao:
                 return nil
             }
@@ -69,21 +69,12 @@ public class WALAuthButton: UIButton {
             }
         }
         
-        fileprivate var imagePadding: CGFloat {
+        fileprivate var leading: CGFloat {
             switch self {
             case .apple:
-                return 71
+                return 12
             case .kakao:
-                return 78
-            }
-        }
-        
-        fileprivate var contentInset: NSDirectionalEdgeInsets {
-            switch self {
-            case .apple:
-                return NSDirectionalEdgeInsets(top: 11, leading: 12, bottom: 11, trailing: 112)
-            case .kakao:
-                return NSDirectionalEdgeInsets(top: 11, leading: 13, bottom: 11, trailing: 121)
+                return 13
             }
         }
     }
@@ -91,6 +82,8 @@ public class WALAuthButton: UIButton {
     // MARK: - Property
     
     public var authType: AuthType = .apple
+    
+    private var iconImageView = UIImageView()
 
     // MARK: - Initialize
     
@@ -108,30 +101,28 @@ public class WALAuthButton: UIButton {
     // MARK: - Set UI
     
     private func setupUI() {
-        
-        var attributedString = AttributedString(authType.text)
-        attributedString.font = .boldSystemFont(ofSize: 17)
-        attributedString.foregroundColor = authType.foregroundColor
-        
-        var buttonConfiguration = UIButton.Configuration.filled()
-        buttonConfiguration.attributedTitle = attributedString
-        buttonConfiguration.contentInsets = authType.contentInset
-        buttonConfiguration.imagePadding = authType.imagePadding
-        buttonConfiguration.imagePlacement = .leading
-        buttonConfiguration.image = authType.icon
-        buttonConfiguration.baseBackgroundColor = authType.backgroundColor
-        buttonConfiguration.background.cornerRadius = Matrix.authCornerRadius
-        buttonConfiguration.background.strokeWidth = authType.borderWidth
-        buttonConfiguration.background.strokeColor = authType.borderColor
-        configuration = buttonConfiguration
-        
+        layer.cornerRadius = Matrix.authCornerRadius
+        layer.borderColor = authType.borderColor
+        layer.borderWidth = authType.borderWidth
+        titleLabel?.font = .boldSystemFont(ofSize: 17)
+        setTitle(authType.text, for: .normal)
         setTitleColor(authType.foregroundColor, for: .normal)
         setTitleColor(authType.foregroundColor.withAlphaComponent(0.5), for: .highlighted)
+        backgroundColor = authType.backgroundColor
+        iconImageView.image = authType.icon
     }
     
     private func setupLayout() {
+        addSubview(iconImageView)
+        
         self.snp.makeConstraints {
             $0.height.equalTo(Matrix.buttonHeight)
+        }
+        
+        iconImageView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview().inset(11)
+            make.leading.equalToSuperview().inset(authType.leading)
+            make.width.height.equalTo(30)
         }
     }
 }
