@@ -78,14 +78,14 @@ public class WALAuthButton: UIButton {
             }
         }
         
-//        fileprivate var contentInset: NSDirectionalEdgeInsets {
-//            switch self {
-//            case .apple:
-//                return NSDirectionalEdgeInsets(top: 11, leading: 12, bottom: 11, trailing: 112)
-//            case .kakao:
-//                return NSDirectionalEdgeInsets(top: 11, leading: 13, bottom: 11, trailing: 121)
-//            }
-//        }
+        fileprivate var contentInset: NSDirectionalEdgeInsets {
+            switch self {
+            case .apple:
+                return NSDirectionalEdgeInsets(top: 11, leading: 12, bottom: 11, trailing: 112)
+            case .kakao:
+                return NSDirectionalEdgeInsets(top: 11, leading: 13, bottom: 11, trailing: 121)
+            }
+        }
     }
     
     // MARK: - Property
@@ -111,31 +111,21 @@ public class WALAuthButton: UIButton {
         
         var attributedString = AttributedString(authType.text)
         attributedString.font = .boldSystemFont(ofSize: 17)
-        attributedString.foregroundColor = authType.foregroundColor
         
         var buttonConfiguration = UIButton.Configuration.filled()
-        buttonConfiguration.title = authType.text
         buttonConfiguration.attributedTitle = attributedString
-//        buttonConfiguration.contentInsets = authType.contentInset
+        buttonConfiguration.contentInsets = authType.contentInset
         buttonConfiguration.imagePadding = authType.imagePadding
         buttonConfiguration.imagePlacement = .leading
         buttonConfiguration.image = authType.icon
         buttonConfiguration.baseBackgroundColor = authType.backgroundColor
-        buttonConfiguration.baseForegroundColor = authType.foregroundColor
         buttonConfiguration.background.cornerRadius = Matrix.authCornerRadius
         buttonConfiguration.background.strokeWidth = authType.borderWidth
         buttonConfiguration.background.strokeColor = authType.borderColor
-        
         configuration = buttonConfiguration
         
-        self.configurationUpdateHandler = { button in
-            switch button.state {
-            case .highlighted:
-                button.configuration?.baseForegroundColor = self.authType.foregroundColor.withAlphaComponent(0.5)
-            default:
-                button.configuration?.baseForegroundColor = self.authType.foregroundColor
-            }
-        }
+        setTitleColor(authType.foregroundColor, for: .normal)
+        setTitleColor(authType.foregroundColor.withAlphaComponent(0.5), for: .highlighted)
     }
     
     private func setupLayout() {
