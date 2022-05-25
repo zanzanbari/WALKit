@@ -38,7 +38,7 @@ public class WALAuthButton: UIButton {
             case .apple:
                 return .black200
             case .kakao:
-                return .yellow100
+                return .black100
             }
         }
         
@@ -78,14 +78,14 @@ public class WALAuthButton: UIButton {
             }
         }
         
-        fileprivate var contentInset: NSDirectionalEdgeInsets {
-            switch self {
-            case .apple:
-                return NSDirectionalEdgeInsets(top: 11, leading: 12, bottom: 11, trailing: 12)
-            case .kakao:
-                return NSDirectionalEdgeInsets(top: 11, leading: 13, bottom: 11, trailing: 13)
-            }
-        }
+//        fileprivate var contentInset: NSDirectionalEdgeInsets {
+//            switch self {
+//            case .apple:
+//                return NSDirectionalEdgeInsets(top: 11, leading: 12, bottom: 11, trailing: 112)
+//            case .kakao:
+//                return NSDirectionalEdgeInsets(top: 11, leading: 13, bottom: 11, trailing: 121)
+//            }
+//        }
     }
     
     // MARK: - Property
@@ -108,9 +108,15 @@ public class WALAuthButton: UIButton {
     // MARK: - Set UI
     
     private func setupUI() {
+        
+        var attributedString = AttributedString(authType.text)
+        attributedString.font = .boldSystemFont(ofSize: 17)
+        attributedString.foregroundColor = authType.foregroundColor
+        
         var buttonConfiguration = UIButton.Configuration.filled()
         buttonConfiguration.title = authType.text
-        buttonConfiguration.contentInsets = authType.contentInset
+        buttonConfiguration.attributedTitle = attributedString
+//        buttonConfiguration.contentInsets = authType.contentInset
         buttonConfiguration.imagePadding = authType.imagePadding
         buttonConfiguration.imagePlacement = .leading
         buttonConfiguration.image = authType.icon
@@ -120,9 +126,6 @@ public class WALAuthButton: UIButton {
         buttonConfiguration.background.strokeWidth = authType.borderWidth
         buttonConfiguration.background.strokeColor = authType.borderColor
         
-        var attString = AttributedString(authType.text)
-        attString.font = .boldSystemFont(ofSize: 17)
-        attString.foregroundColor = authType.foregroundColor
         configuration = buttonConfiguration
         
         self.configurationUpdateHandler = { button in
