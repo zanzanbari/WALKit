@@ -50,6 +50,16 @@ public enum WALIcon: String {
     case imgWallbbongCheer = "img_walbbong_cheer"
     case imgWallbbongAngry = "img_walbbong_angry"
     case imgWalbbongLogo = "img_walbbong_logo"
+    case imgWalBBongArrive1 = "walBBong_arrive1"
+    case imgWalBBongArrive2 = "walBBong_arrive2"
+    case imgWalBBongArrive3 = "walBBong_arrive3"
+    case imgWalBBongSleeping = "walBBong_sleeping"
+    case imgWalBBongWaiting = "walBBong_waiting"
+    
+    // paw Asset
+    case imgPawActive = "img_paw_active"
+    case imgPawInAtive = "img_paw_inactive"
+    case imgPawSpecial = "img_paw_special"
 }
 
 public extension WALIcon {
