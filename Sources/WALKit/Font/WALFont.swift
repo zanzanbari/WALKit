@@ -57,7 +57,7 @@ public enum WALFont {
         case .body8:
             return FontProperty(font: .regular, size: 14, kern: -0.3, lineHeight: nil)
         case .body9:
-            return FontProperty(font: .regular, size: 13, kern: -0.3, lineHeight: nil)
+            return FontProperty(font: .regular, size: 13, kern: -0.3, lineHeight: 22)
         }
     }
 }
