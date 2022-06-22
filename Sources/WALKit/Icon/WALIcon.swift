@@ -65,7 +65,8 @@ public enum WALIcon: String {
     case imgPawInAtive = "img_paw_inactive"
     case imgPawSpecial = "img_paw_special"
     
-    
+    // ETC Asset
+    case imgMainBubble = "img_main_bubble"
 }
 
 public extension WALIcon {
