@@ -18,6 +18,7 @@ public enum WALIcon: String {
     case btnInfo = "btn_info"
     case btnSelect = "btn_select_box_active"
     case btnUnselect = "btn_select_box"
+    case btnPlus = "btn_plus"
     
     // Icon Asset
     case icnWarning = "icn_warning"
@@ -55,11 +56,16 @@ public enum WALIcon: String {
     case imgWalBBongArrive3 = "walBBong_arrive3"
     case imgWalBBongSleeping = "walBBong_sleeping"
     case imgWalBBongWaiting = "walBBong_waiting"
+    case imgWalbbongSpecial = "img_walbbong_special"
+    case imgWalbbongComplete = "img_walbbong_complete"
+    case imgWalbbongPopup = "img_walbbong_popup"
     
     // paw Asset
     case imgPawActive = "img_paw_active"
     case imgPawInAtive = "img_paw_inactive"
     case imgPawSpecial = "img_paw_special"
+    
+    
 }
 
 public extension WALIcon {
