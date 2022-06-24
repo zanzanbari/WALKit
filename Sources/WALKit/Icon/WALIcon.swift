@@ -19,6 +19,7 @@ public enum WALIcon: String {
     case btnSelect = "btn_select_box_active"
     case btnUnselect = "btn_select_box"
     case btnPlus = "btn_plus"
+    case btnSetting = "btn_setting"
     
     // Icon Asset
     case icnWarning = "icn_warning"
