@@ -45,7 +45,7 @@ public class WALAuthButton: UIButton {
         fileprivate var borderColor: CGColor? {
             switch self {
             case .apple:
-                return UIColor.black200.cgColor
+                return nil
             case .kakao:
                 return nil
             }
@@ -54,7 +54,7 @@ public class WALAuthButton: UIButton {
         fileprivate var borderWidth: CGFloat {
             switch self {
             case .apple:
-                return 1
+                return 0
             case .kakao:
                 return 0
             }
