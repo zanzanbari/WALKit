@@ -19,6 +19,7 @@ public struct FontProperty {
 }
 
 public enum WALFont {
+    case cafe24
     case title0
     case title05
     case title1
@@ -35,6 +36,8 @@ public enum WALFont {
     
     public var fontProperty: FontProperty {
         switch self {
+        case .cafe24:
+            return FontProperty(font: .cafeBold, size: 27, kern: -0.3, lineHeight: nil)
         case .title0:
             return FontProperty(font: .semibold, size: 24, kern: -0.3, lineHeight: nil)
         case .title05:

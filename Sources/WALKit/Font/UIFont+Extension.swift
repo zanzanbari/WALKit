@@ -15,6 +15,7 @@ public extension UIFont {
         case medium = "Pretendard-Medium"
         case semibold = "Pretendard-Semibold"
         case bold = "Pretendard-Bold"
+        case cafeBold = "Cafe24Ssurround"
         
         var name: String {
             return self.rawValue
