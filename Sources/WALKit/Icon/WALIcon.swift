@@ -43,6 +43,8 @@ public enum WALIcon: String {
     case icnDeveloper = "icn_developer"
     case icnDesigner = "icn_designer"
     case icnServer = "icn_server"
+    case icnSettingComplete = "icn_settingComplete"
+    case icnCreateComplete = "icn_createComplete"
     
     // Card Asset
     case imgDripActive = "img_drip_active"
