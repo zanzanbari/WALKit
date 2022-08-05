@@ -39,6 +39,10 @@ public enum WALIcon: String {
     case icnProfile = "icn_profile"
     case icnSelectActive = "icn_select_active"
     case icnSelectInactive = "icn_select_inactive"
+    case icnWal = "icn_wal"
+    case icnDeveloper = "icn_developer"
+    case icnDesigner = "icn_designer"
+    case icnServer = "icn_server"
     
     // Card Asset
     case imgDripActive = "img_drip_active"
