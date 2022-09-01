@@ -33,6 +33,7 @@ public enum WALFont {
     case body7
     case body8
     case body9
+    case body10
     
     public var fontProperty: FontProperty {
         switch self {
@@ -61,8 +62,10 @@ public enum WALFont {
         case .body7:
             return FontProperty(font: .regular, size: 15, kern: -0.3, lineHeight: 21)
         case .body8:
-            return FontProperty(font: .regular, size: 14, kern: -0.3, lineHeight: nil)
+            return FontProperty(font: .medium, size: 14, kern: -0.3, lineHeight: nil)
         case .body9:
+            return FontProperty(font: .regular, size: 14, kern: -0.3, lineHeight: nil)
+        case .body10:
             return FontProperty(font: .regular, size: 13, kern: -0.3, lineHeight: 22)
         }
     }
