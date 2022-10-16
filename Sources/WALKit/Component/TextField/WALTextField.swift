@@ -41,6 +41,7 @@ public class WALTextField: UITextField {
         tintColor = .orange100
         backgroundColor = .white100
         layer.cornerRadius = Matrix.textFieldCornerRadius
+        clearButtonMode = .whileEditing
         setupPadding()
         setupState()
     }
