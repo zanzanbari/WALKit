@@ -74,6 +74,6 @@ public class WALTextField: UITextField {
     
     public override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
         let originalRect = super.clearButtonRect(forBounds: bounds)
-        return originalRect.offsetBy(dx: -16, dy: 0)
+        return originalRect.offsetBy(dx: -14, dy: 0)
     }
 }
