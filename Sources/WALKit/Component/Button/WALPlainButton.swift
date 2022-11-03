@@ -42,7 +42,7 @@ public class WALPlainButton: UIButton {
         titleLabel?.font = WALFont.body2.font
         layer.cornerRadius = Matrix.buttonCornerRadius
         setTitleColor(.white100, for: .normal)
-        setTitleColor(.orange50, for: .highlighted)
+        setTitleColor(.orange300, for: .highlighted)
         setupColor()
     }
     

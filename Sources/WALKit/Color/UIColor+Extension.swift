@@ -33,4 +33,8 @@ public extension UIColor {
     static let orange100 = UIColor(named: "orange100", in: .module, compatibleWith: nil)!
     static let orange200 = UIColor(named: "orange200", in: .module, compatibleWith: nil)!
     static let mint100 = UIColor(named: "mint100", in: .module, compatibleWith: nil)!
+    
+    // Pressed Color
+    static let orange300 = UIColor(named: "orange300", in: .module, compatibleWith: nil)!
+    static let mint200 = UIColor(named: "mint200", in: .module, compatibleWith: nil)!
 }
