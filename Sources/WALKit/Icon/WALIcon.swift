@@ -15,6 +15,7 @@ public enum WALIcon: String {
     case btnDelete = "btn_delete"
     case btnBack = "btn_back"
     case btnHistory = "btn_history"
+    case btnInfoOrange = "btn_info_2"
     case btnInfo = "btn_info"
     case btnSelect = "btn_select_box_active"
     case btnUnselect = "btn_select_box"
@@ -45,6 +46,7 @@ public enum WALIcon: String {
     case icnServer = "icn_server"
     case icnSettingComplete = "icn_settingComplete"
     case icnCreateComplete = "icn_createComplete"
+    case icnHistoryEmpty = "icn_history_empty"
     
     // Card Asset
     case imgDripActive = "img_drip_active"
