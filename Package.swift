@@ -14,13 +14,15 @@ let package = Package(
             targets: ["WALKit"]),
     ],
     dependencies: [
-        .package(name: "SnapKit", url: "https://github.com/SnapKit/SnapKit", from: "5.6.0")
+        .package(name: "SnapKit", url: "https://github.com/SnapKit/SnapKit", from: "5.6.0"),
+        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "4.1.2")
     ],
     targets: [
         .target(
             name: "WALKit",
             dependencies: [
-                .product(name: "SnapKit", package: "SnapKit", condition: .when(platforms: [.iOS]))
+                .product(name: "SnapKit", package: "SnapKit", condition: .when(platforms: [.iOS])),
+                .product(name: "Lottie", package: "Lottie", condition: .when(platforms: [.iOS]))
             ],
             path: "Sources/WALKit",
             resources: [
