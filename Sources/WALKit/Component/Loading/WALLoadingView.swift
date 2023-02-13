@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 import SnapKit
 
-final class LoadingView: UIView {
+final public class LoadingView: UIView {
     
     // MARK: - Property
     
@@ -46,7 +46,7 @@ final class LoadingView: UIView {
     
     // MARK: - Custom Method
     
-    func play() {
+    public func play() {
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
             self.backgroundColor = .black100.withAlphaComponent(0.5)
             self.loadingAnimationView.play()
@@ -54,7 +54,7 @@ final class LoadingView: UIView {
         })
     }
     
-    func hide() {
+    public func hide() {
         UIView.animate(withDuration: 0.3, delay: 0, options: .transitionCrossDissolve, animations: {
             self.loadingAnimationView.stop()
             self.loadingAnimationView.removeFromSuperview()
