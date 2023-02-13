@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  WALLoadingView.swift
 //  
 //
 //  Created by heerucan on 2023/02/13.
@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 import SnapKit
 
-final public class LoadingView: UIView {
+final public class WALLoadingView: UIView {
     
     // MARK: - Property
     
