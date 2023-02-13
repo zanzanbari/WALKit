@@ -22,7 +22,3 @@ public class JSONFile {
         }
     }
 }
-
-public func registerJSONFile() {
-    _ = JSONFile.read(resource: "loading")
-}
