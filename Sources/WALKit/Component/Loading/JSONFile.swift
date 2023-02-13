@@ -1,5 +1,5 @@
 //
-//  JsonFile.swift
+//  JSONFile.swift
 //  
 //
 //  Created by heerucan on 2023/02/14.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-public class JsonFile {
-    static func read(resource: String) -> Any? {
+public class JSONFile {
+    static public func read(resource: String) -> Any? {
         if let path = Bundle.module.path(forResource: resource, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: [])
@@ -21,4 +21,8 @@ public class JsonFile {
             return nil
         }
     }
+}
+
+public func registerJSONFile() {
+    _ = JSONFile.read(resource: "loading")
 }

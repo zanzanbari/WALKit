@@ -14,7 +14,7 @@ final public class WALLoadingView: UIView {
     
     // MARK: - Property
     
-    private var loadingAnimationView = LottieAnimationView(name: JsonFile.read(resource: "loading") as! String)
+    public var loadingAnimationView = LottieAnimationView(name: "loading")
     
     // MARK: - Initializer
     
