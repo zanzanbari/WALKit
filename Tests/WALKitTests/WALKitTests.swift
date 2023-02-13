@@ -14,6 +14,11 @@ final class WALKitTests: XCTestCase {
             XCTAssertNotNil(image)
         }
     }
+    
+    func testLoadJSONFileFromBundle() {
+        let jsonFile = JSONFile.read(resource: "loading")
+        XCTAssertNotNil(jsonFile)
+    }
 }
 
 fileprivate extension UIColor {
