@@ -26,7 +26,7 @@ let package = Package(
             ],
             path: "Sources/WALKit",
             resources: [
-                .process("Icon/loading.json"),
+                .process("loading.json"),
                 .process("Font/Fonts"),
             ]
         ),
