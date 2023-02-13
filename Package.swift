@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "SnapKit", url: "https://github.com/SnapKit/SnapKit", from: "5.6.0"),
-        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "4.1.2")
+        .package(name: "Lottie", url: "https://github.com/airbnb/lottie-ios.git", from: "4.0.0")
     ],
     targets: [
         .target(
@@ -26,9 +26,8 @@ let package = Package(
             ],
             path: "Sources/WALKit",
             resources: [
-                .process("Icon/loading.json"),
-                .process("Font/Fonts"),
-                .process("Icon/Icon.xcassets"),
+                .copy("Icon/loading.json"),
+                .copy("Font/Fonts"),
             ]
         ),
         .testTarget(
