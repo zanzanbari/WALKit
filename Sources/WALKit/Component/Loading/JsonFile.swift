@@ -8,8 +8,8 @@
 import Foundation
 
 public class JsonFile {
-    static func read() -> Any? {
-        if let path = Bundle.module.path(forResource: "loading", ofType: "json") {
+    static func read(resource: String) -> Any? {
+        if let path = Bundle.module.path(forResource: resource, ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: [])
                 let jsonResult = try JSONSerialization.jsonObject(with: data, options: [])
