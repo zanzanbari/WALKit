@@ -15,8 +15,8 @@ final class WALKitTests: XCTestCase {
         }
     }
     
-    func testLoadJsonFileFromBundle() {
-        let jsonFile = JsonFile.read(resource: "loading")
+    func testLoadJSONFileFromBundle() {
+        let jsonFile = JSONFile.read(resource: Matrix.loading)
         XCTAssertNotNil(jsonFile)
     }
 }

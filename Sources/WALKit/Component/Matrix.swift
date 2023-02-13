@@ -7,7 +7,7 @@
 
 import UIKit
 
-public struct Matrix {
+public enum Matrix {
     // NavigationBar
     static let navigationHeight: CGFloat = 44
     static let barButtonSize: CGFloat = 44
